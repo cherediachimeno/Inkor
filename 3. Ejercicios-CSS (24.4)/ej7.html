@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 7</title>
+    <style>
+      @media (max-width: 600px) {
+        #contenido,
+        #recomendaciones {
+          background-color: red;
+          width: 100%;
+          font-size: 11px;
+        }
+      }
+
+      @media (min-width: 601px) and (max-width: 800px) {
+        #contenido {
+          background-color: green;
+          width: 60%;
+          font-size: 12px;
+        }
+        #recomendaciones {
+          background-color: blue;
+          width: 30%;
+          font-size: 12px;
+        }
+      }
+
+      @media (min-width: 801px) {
+        #contenido {
+          background-color: violet;
+          width: 80%;
+          font-size: 14px;
+        }
+        #recomendaciones {
+          background-color: green;
+          width: 15%;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="contenido">
+        <h1>Título</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+          illum sequi tenetur neque! Facere dicta perspiciatis suscipit quae
+          quibusdam qui nostrum optio, voluptates, fuga impedit totam soluta,
+          quisquam itaque incidunt! Amet illo vitae tempora quis, hic recusandae
+          obcaecati! Voluptatem doloribus ipsum eius maxime necessitatibus quos
+          delectus. Quam fugit, fugiat sunt nobis non itaque deleniti excepturi
+          numquam incidunt, tempore magnam et. Numquam eveniet ex perferendis
+          modi autem vel animi veritatis labore suscipit dignissimos
+          reprehenderit iusto ut quas unde ea consectetur dolores, consequatur
+          officiis veniam tempore natus. Non, officia! Tempore, quaerat quidem.
+        </p>
+      </div>
+      <div id="recomendaciones">
+        <h3>Lista con recomendaciones</h3>
+        <ul>
+          <li>Elemento 1</li>
+          <li>Elemento 2</li>
+          <li>Elemento 3</li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
