@@ -1,0 +1,35 @@
+.container {
+    /* DATOS DE LA CAJA */
+    height: 600px;
+    width: 100%;
+    border: 2px solid black;
+    margin: 3px;
+
+    /* FLEXBOX */
+    display: flex; /* activamos flexbox */
+    flex-direction: row; /* marcamos posicionamiento de los elementos
+    internos (en columna, en fila...) */ 
+    flex-wrap: wrap; /* activamos que se adapte a la pantalla y
+    los elementos que no vayan a ser visibles, se posicionen abajo */
+    /* flex-flow: row wrap; /* optimización del código
+    con flex-flow, incorporamos flex-direction y flex-wrap */
+    justify-content:space-between; /* movemos elementos a nivel horizontal */
+    align-items: start;
+    align-content: space-around;
+}
+
+.container1 {
+    background-color: darkkhaki;
+}
+
+.container2 {
+    background-color: aquamarine
+}
+
+.item {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(205, 191, 191);
+    border: 2px black solid;
+    margin: 2px;
+}
