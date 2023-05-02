@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contenedor {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            height: 1000px;
+            gap: 10px;
+        }
+
+        .caja {
+            border: 2px black solid;
+            border-radius: 2px;
+            background-color: gainsboro;
+
+        }
+
+        .caja1 {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+            background-color: goldenrod;
+            background-image: url("img/Horizon.webp");
+            background-size: cover;
+        }
+
+        .caja4 {
+            background-color: aqua;
+            grid-column: 3/4;
+            grid-row: 1/3;
+            background-image: url("img/Viantel.webp");
+            background-size: cover;
+        }
+
+        .caja2,
+        .caja3 {
+            background-color: wheat;
+        }
+
+        .caja1:hover {
+            border: 15px solid rgb(138, 114, 161);
+            border-radius: 40px;
+        }
+
+        .caja4:hover {
+            border: 15px solid rgb(138, 114, 161);
+            border-radius: 40px;
+        }
+
+        /* Cuando la pantalla sea menor a 950px, hago estos cambios: */
+        @media screen and (max-width: 950px) {
+
+            body {
+                background-color: antiquewhite;
+            }
+
+            #contenedor {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .caja {
+                height: 250px;
+                width: 50%;
+            }
+
+            .caja1 {
+                background-image: url("img/Horizon.webp");
+                background-size: cover;
+            }
+
+            .caja2,
+            .caja3 {
+                background-color: rgb(26, 97, 203);
+            }
+
+            .caja1:hover {
+                border: 10px solid yellowgreen;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <section id="contenedor">
+
+        <div class="caja caja1">box 1</div>
+        <div class="caja caja2">box 2</div>
+        <div class="caja caja3">box 3</div>
+        <div class="caja caja4">box 4</div>
+
+    </section>
+</body>
+
+</html>
