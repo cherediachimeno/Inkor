@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 32px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 5px;
+        }
+
+        .box {
+            place-items: center;
+            border: 3px solid red;
+            background-color: gainsboro;
+            place-items: center;
+        }
+
+        .box1 {
+            grid-column: 1/4;
+            /* 3 fr */
+        }
+
+        .box2 {
+            grid-column: 4/13;
+            /* 9 fr */
+        }
+
+        /* RASGOS RESPONSIVOS */
+        /* cuando la pantalla sea más pequeña que 450px... */
+
+        @media (max-width: 400px) {
+
+            * {
+                height: 100vh;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">Left</div>
+        <div class="box box2">Right</div>
+    </div>
+</body>
+
+</html>
