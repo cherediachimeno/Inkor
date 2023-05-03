@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+
+    <script>
+        // Pide dos números al usuario y realiza una suma de los mismos.
+        /*
+        //FORMA LENTA Y FEA
+        let num1 = prompt("Dime un número"); // Guarda el número como string
+        let num2 = prompt("Dime otro número");
+
+        let num1Int = parseInt(num1);
+        let num2Int = parseInt(num2);
+
+        let total = num1Int + num2Int;
+
+        alert("La suma de los dos números da " + total);
+
+        //FORMA RÁPIDA Y MÁS ÓPTIMA (TAMBIÉN FEA)
+        let numero1 = parseInt(prompt("Dime un número"));
+        let numero2 = parseInt(prompt("dame otro"));
+        let calculo = numero1 + numero2;
+
+        alert("La suma de los dos números da " + calculo);
+        alert(`La suma de los dos números da ${calculo}`);
+
+        // Escribe un programa que pida al usuario el radio de un círculo 
+        // y que calcule y muestre el área y el perímetro
+        // (el área de un círculo es PI por radio cuadrado y el
+        // perímetro es 2 por radio por PI). PI es = 3.141593
+        */
+        /*
+         const pi = 3.141593;
+ 
+         let radio = parseInt(prompt("dame el radio de un círculo"));
+         // let area = pi * (radio * radio);
+         let area = pi * Math.pow(radio, 2);
+         let perimetro = 2 * radio * pi;
+ 
+         console.log("el area es", area);
+         console.log("el perimetro es", perimetro);
+ 
+         console.log("el resto de 4 y 3 es " + (4 % 3));*/
+        /*
+        let edad = 10;
+        edad = edad + 1;
+        console.log(edad); // 10 --- 11
+
+        let edadAlejandro = 21;
+        edadAlejandro++;
+
+        console.log(edadAlejandro);
+
+*           */
+
+        let valor = 15;
+        console.log(valor) // 15
+
+        let guardado1 = valor++; // guardado1 se queda con el 15
+        // posteriormente valor cambia su número a 16.
+
+        console.log(valor) // 16
+
+        //+1  //16
+        let guardado2 = ++valor; // guardado2 se queda con un 17.
+        // primero sumará 1 a valor (1 + 16), y luego lo guarda en
+        // la variable
+
+    </script>
+</body>
+
+</html>
