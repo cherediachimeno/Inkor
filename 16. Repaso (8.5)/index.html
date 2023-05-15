@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <h1>Mira la consola para ver el resultado</h1>
+    <script>
+        // EJERCICIO TEMPERATURA 
+        /*
+        let temp = parseInt(prompt("dame la temperatura"));
+
+        if (temperatura > 40) {
+            console.log("vete a otro sitio: mucho calor");
+        } else if (temperatura < 10) {
+            console.log("vete a otro sitio: mucho frío");
+        } else if (temperatura <= 20) {
+            console.log("enciende la calefacción");
+        } else if (temperatura <= 30) {
+            console.log("no hagas nada");
+        } else if (temperatura <= 40) {
+            console.log("enciende el aire acondicionado");
+        } else {
+            console.log("error en los datos");
+        }
+        /*
+
+        /Escribe un programa que te calcule la largura de un string que pides al usuario
+        */
+        /*
+         let pregunta = prompt("dame un string"); // CARLOS
+         let largoString = pregunta.length;
+
+         let cuantosCaracteres = pregunta.length / 2; // Selecciono la primera mitad del string
+         let primeraParte2 = pregunta.substring(0, cuantosCaracteres);
+
+         console.log(`El string dado es ${pregunta} y tiene ${largoString} caracteres de largo`);
+         */
+
+        /*
+       // PRIMERO PEDIMOS TEMPERATURA EN CELSIUS.
+
+       let temperatura = parseInt(prompt("dame temperatura en celsius"));
+
+       // SEGUNDO: calcular fahrenheit. 
+       // (Grados Celsius * 9 / 5) + 32
+
+       let fahre = (temperatura * 9 / 5) + 32;
+       console.log("la temperatura en fahrenheit es de " + fahre);
+       */
+
+        // preguntar al usuario a qué continente quiere viajar
+
+        let decision = prompt("a qué continente quieres viajar?");
+
+        continente = decision.toLowerCase().trim();
+
+        switch (continente) {
+            case "europa": console.log("viajas a Estambul");
+                break;
+            case "america del sur":
+            case "américa del sur": console.log("viajas a sao paolo");
+                break;
+            case "america del norte":
+            case "américa del norte": console.log("viajas a ciudad de méxico");
+                break;
+            default: console.log("continente no válido");
+        }
+
+        // crear switch y que salga ciudad más poblada.
+
+
+
+
+
+    </script>
+</body>
+
+</html>

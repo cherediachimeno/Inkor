@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        let estudiantes = ["Juan", "Paco", "Loli"];
+        let notaEstudiantes = [5, 6, 1]
+        let direccionEstudiantes = ["Málaga", "Barcelona", "Hospitalet"]
+
+        let lista = [
+            {
+                nombre: "Paco",
+                nota: 5,
+                apellidos: ["González", "Prieto"],
+                mascotas: {
+                    mascota1: "José Lui",
+                }
+            },
+            {
+                nombre: "José",
+                nota: 4,
+                apellidos: ["Alvarenga"],
+                mascotas: {
+                    mascota1: "Mac",
+                }
+            }
+        ];
+
+        let valor = prompt("qué conusltar: nombre, nota, apellidos o mascotas?");
+        let indice = parseInt(prompt("dime el índice del estudiante, 0 o 1"));
+
+        if (valor == "mascotas") {
+            console.log("DATOS CONSULTADOS ****" + lista[indice][valor]["mascota1"]);
+        } else {
+            console.log("DATOS CONSULTADOS ****" + lista[indice][valor]);
+        }
+
+        lista[0].nombre = "Toni";
+        lista[1]["nombre"] = "José Luís";
+        console.log(lista[0]);
+        console.log(lista[1]);
+
+        */
+        /*
+         let persona = {
+             nombre: "Dídac",
+             edad: 7,
+             hobbies: "trenes"
+         }
+ 
+         persona["nombre"] = "Nil";
+         persona.edad = 2;
+         persona.hobbies = "aviones";
+ 
+         console.log(persona);
+         */
+
+        const lista2 = [
+            1,
+            2,
+            "David",
+            {
+                nombre: "Juan",
+                edad: 35
+            },
+            true
+        ]
+
+        const people = {
+            SofiaMaza: {
+                completeName: "Sofia Maza Hurtado",
+                age: 20,
+                job: "Developer",
+                pets: {
+                    name: "Milú",
+                    animal: {
+                        type: "Dog",
+                        age: 150
+                    }
+                }
+            },
+            CarlosHeredia: {
+                completeName: "Carlos Heredia Chimeno",
+                age: 22,
+                job: "Developer",
+                pets: {
+                    name: "Milú",
+                    animal: {
+                        type: "Dog",
+                        age: 3
+                    }
+                }
+            }
+        };
+
+        people.CarlosHeredia.hobbies = "trenes";
+        console.log(people.CarlosHeredia);
+
+        delete people.SofiaMaza.completeName;
+        console.log(people.SofiaMaza.pets.animal.age)
+        console.log(people["CarlosHeredia"]["pets"]["animal"]["age"]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

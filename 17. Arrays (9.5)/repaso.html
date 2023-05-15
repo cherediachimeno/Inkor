@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*Pregunta al usuario adónde quiere ir entre tres opciones: Barcelona, Madrid,
+    Bilbao.
+    a. Una vez escogido el destino, preguntar si quiere ir en tren, autobús o
+        coche.
+            i. Una vez seleccionado destino y forma de ir, mostrar el precio
+            por pantalla.
+            ii. Inventate los precios pero que tengan sentido y que sean
+            diferentes. Por ejemplo, elijo Bilbao en tren, me sale a 150
+            euros; pero si elijo Barcelona en tren, me sale a 120.*/
+
+        /*
+
+    // PREGUNTAMOS DESTINO Y TIPO DE TRANSPORTE
+    let destino = prompt("¿Adónde quierres ir: Barcelona, Madrid, Bilbao?");
+    let transporte = prompt("¿Vas a ir en tren, autobús o coche?")
+
+    // TRANSFORMAMOS LOS STRINGS OBTENIDOS
+    destino = destino.toLowerCase().trim();
+    if (destino == "bcn" || destino == "barna") destino = "barcelona";
+
+    transporte = transporte.toLowerCase().trim();
+    if (transporte == "bus" || transporte == "autobús") transporte = "autobus";
+
+    // CREAMOS ESTRUCTURA CONDICIONAL 
+
+    switch (destino) {
+        case "barcelona":
+            switch (transporte) {
+                case "autobus": console.log(`Nos vamos a ${destino} en ${transporte} pagando 60€`);
+                    break;
+                case "coche": console.log(`Nos vamos a ${destino} en ${transporte} pagando 95€`);
+                    break;
+                case "tren": console.log(`Nos vamos a ${destino} en ${transporte} pagando 120€`);
+                    break;
+            }
+            break;
+        case "madrid":
+            switch (transporte) {
+                case "autobus": console.log(`Nos vamos a ${destino} en ${transporte} pagando 70€`);
+                    break;
+                case "coche": console.log(`Nos vamos a ${destino} en ${transporte} pagando 120€`);
+                    break;
+                case "tren": console.log(`Nos vamos a ${destino} en ${transporte} pagando 150€`);
+                    break;
+            }
+            break;
+        case "bilbao":
+            switch (transporte) {
+                case "autobus": console.log(`Nos vamos a ${destino} en ${transporte} pagando 75€`);
+                    break;
+                case "coche": console.log(`Nos vamos a ${destino} en ${transporte} pagando 135€`);
+                    break;
+                case "tren": console.log(`Nos vamos a ${destino} en ${transporte} pagando 150€`);
+                    break;
+            }
+            break;
+        default: alert("destino no válido");
+
+    } */
+
+        // preguntar nº helados
+        /*
+            let helados = parseInt(prompt("cuántos helados quieres comprar?"));
+            let total;
+    
+            if (helados >= 10) {
+                total = (helados) * 2;
+                total = total + 1; // total++
+                console.log(`el precio total es de ${total}. Te llevas este nº de helados: ${helados} (con uno de regalo)`);
+            } else {
+                total = helados * 2;
+                console.log(`el precio total es de ${total}. Te llevas este nº de helados: ${helados}`);
+            } */
+
+        // 1) Crea un condicional que pregunte al usuario si es mayor de edad.
+        // a. Si es mayor de edad, preguntarle si tiene carnet de conducir. Si tiene carnet de conducir, felicitarle y decirle que vendes coches muy bonitos.
+        // Si en cambio dice que no, que no tiene carnet, animarle a que se lo saque.
+        // b. Si es menor, decirle que “encantado, pero adiós”.
+
+        let edad = prompt("¿Eres mayor de edad?");
+        edad = edad.toLowerCase();
+
+        if (edad == "si" || edad == "sí") {
+            let carnet = prompt("¿Tienes carnet de conducir?");
+            carnet = carnet.toLowerCase();
+            if (carnet == "si" || carnet == "sí" || carnet == "SI") {
+                console.log("¡Enhorabuena! Vendemos coches muy bonitos.");
+            } if (carnet == "no") {
+                console.log("Te animo a que te lo saques.");
+            } else {
+                console.log("Lo siento, no entiendo tu respuesta.");
+            }
+        } else if (edad == "no") {
+            console.log("Encantado, pero adiós.");
+        } else {
+            console.log("Lo siento, no entiendo tu respuesta.");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        let estudiante1 = "Jose";
+        let estudiante2 = "Maria Paula";
+        let estudiante3 = "Fran";
+        let estudiante4 = "Alejandro";
+        let estudiante5 = "Javier";
+        let estudiante6 = "Raquel";
+        let estudiante7 = "Sílvia";
+        let estudiante8 = "Jostin";
+        let estudiante9 = "Ruth";
+        let estudiante10 = "Ronaldo";
+        let estudiante11 = "Jairo";
+        let estudiante12 = "Mila";
+        let estudiante13 = "Vicente";
+        let estudiante14 = "Dario";
+        //               0        1              2       3           4         5         6         7          8
+        const lista = ["Jose", "Maria Paula", "Fran", "Alejandro", "Javier", "Ruth", "Rafael", "Jessica"];
+        lista[0];
+
+        let num = parseInt(prompt("dame el índice donde quieres situar tu nombre"));
+        let indiceMaximo = lista.length - 1 // el índice máximo es 7.
+        if (num > indiceMaximo) {
+            alert("una pena, adiós, el indice es mayor a los que tenemos");
+        } else {
+            let nombre = prompt("ahora dime tu nombre");
+            lista[num] = nombre;
+        }
+
+        /*
+        let newArray = [];
+        const newArray2 = ["Sílvia", "Dario", 31, 55, true, false];
+        console.log(newArray2[0]);
+        newArray2[0] = "Alejandro";
+        newArray2[3] = nombre; */
+
+
+
+
+        console.log(lista[lista.length / 2]);
+
+        // EL ARRAY TIENE 8 ITEMS.  lista[8]
+        console.log(lista.length);
+
+
+        console.log(lista);
+
+
+        let num1 = 20;
+        let num2 = 40;
+        let num3 = 60;
+
+        if (num1 - num2 == 20) console.log(`num1 tiene una diferencia de 20 respecto a num2`);
+        if (num1 - num3 == 20) console.log(`num1 tiene una diferencia de 20 respecto a num3`);
+
+        let probando = [10, 5, true, null, "Jose", "Probando", "INKOR", -10];
+
+        console.log(lista[0]);
+        console.log(lista[4]);
+
+        const CPU = [];
+        let procesador = prompt("qué procesador tienes?");
+
+        CPU.push("Ryzen 5");
+        CPU.push("Ryzen 7");
+        CPU.push("i3");
+        CPU.push("i5");
+        CPU.unshift(procesador);
+
+        alert(CPU);
+    </script>
+</body>
+
+</html>
