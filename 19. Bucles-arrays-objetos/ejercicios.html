@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1" style="display: flex; flex-wrap: wrap">
+        <!-- aquí imprimiré todo lo que salga del bucle -->
+    </div>
+    <script>
+        /*/*
+
+        /* // 1 Crear un array. Usar un for para asignar los valores de 20 a 11 a las 10 primeras posiciones (en orden descendente).
+        Usar un for para mostrar los 10 valores en pantalla. 
+        const numeros = [];
+
+        // QUEREMOS CONSEGUIR CON UN BUCLE ES... 
+        // const numeros = [20, 19, 18, 17, 16, 15, 14, 13, 12, 11]
+
+        for (let i = 20; i > 10; i--) {
+            numeros.push(i);
+            console.log(numeros);
+        }
+
+        console.log(numeros);
+
+        // el mismo pero de dos en dos...
+        // const numeros = [20, 18, 16, 14, 12, 10]
+        const numeros2 = [];
+
+        for (let i = 20; i > 10; i -= 4) {
+            numeros2.push(i);
+        }
+
+        console.log(numeros2);
+
+        /* // 1 Crear un array. Usar un for para asignar los valores de 50 a 41 a las 10 primeras posiciones (en orden descendente).
+Usar un for para mostrar los 10 valores en pantalla. 
+
+        let numeros3 = [];
+
+        for (let i = 50; i >= 41; i--) {
+            numeros3.push(i);
+        }
+
+        console.log(numeros3); */
+        /*
+        const mes = [
+            "",
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre",
+        ];
+
+        let eleccion;
+
+        do {
+            eleccion = parseInt(prompt("Dime un número del 1 al 12 y te mostraré ese mes en pantalla. Si insertas nº erróneo sigue preguntando")
+            );
+            document.getElementById("div1").innerHTML = `<h1>El mes elegido es ${mes[eleccion]}</h1>`;
+
+        } while (eleccion > 12 || eleccion <= 0);
+        */
+
+        /*
+        7)
+Ara, crea un loop "for" que imprimeixi a la consola
+TOTS els números entre 0 i 50.
+ 
+Afegeix un "if/else" al cos del loop. Si el número (x)
+és parell, imprimeix `The number ${x} is even`. Si el
+número és senar, imprimeix `The number ${x} is odd`.  */
+
+        for (let i = 0; i <= 50; i++) {
+
+            if ((i % 2) == 0) {
+                document.getElementById("div1").innerHTML += `
+                    <div class="card" 
+                    style="background-color: purple; border: 2px solid black; width: 500px; margin: 5px">
+                    <h4>El número ${i} es par, qué gracioso</h4>
+                    </div> 
+                    `;
+            } else {
+                document.getElementById("div1").innerHTML += `
+                    <div class="card" 
+                    style="background-color: green; border: 2px solid black; width: 500px; margin: 5px">
+                    <h4>El número ${i} es impar, no mola</h4>
+                    </div> 
+                    `;
+            }
+
+            console.log("vuelta nº " + i);
+        }
+
+        /*    6)
+Imprimeix tots els números PARELLS entre 0 i 50.
+Afegeix un comptador d'iteracions i imprimeix-los
+a un console.log al final.
+
+Pista: incrementa el loop de dos en dos a cada iteració!*/
+
+        /*
+
+for (let i = 0; i < 50; i += 2) {
+    console.log(i);
+}
+
+// EJEMPLO DARÍO
+let num1 = 0;
+do {
+    console.log(num1);
+    num1 += 2;
+}
+while (num1 <= 50)
+*/
+
+        /*
+                /* 1)
+                El següent loop imprimeix les keys de l'objecte "person".
+                Modifica'l per què n'imprimeixi els valors. 
+                ------------------
+                const person = {
+                    name: "Sofia",
+                    age: 30,
+                    location: "Barcelona",
+                    hairColor: "brown",
+                    coder: true,
+                };
+        
+                for (let key in person) {
+                    document.getElementById("div1").innerHTML += `
+                    <div class="card" 
+                    style="background-color: brown; border: 2px solid black; width: 500px; margin: 5px">
+                    <h4>${key}: ${person[key]}</h4>
+                    </div> 
+                    `;
+                }*/
+    </script>
+</body>
+
+</html>
