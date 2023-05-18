@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #print {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .ficha {
+            border: 2px black solid;
+            height: 30%;
+            width: 30%;
+            margin: 3px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="print"></section>
+
+    <form action="#">
+        <label for="animal">Introduce el animal del que quieres mostrar información</label>
+        <br>
+        <input type="text" name="animal" id="animal">
+    </form>
+    <button onclick="cargarAnimal()">Enviar</button>
+
+
+    <button onclick="recorrerArray()">Recorrer Array</button>
+
+    <script>
+        let eleccion = "";
+
+        let animals = {
+            rhino: {
+                name: "Rhino",
+                picture: "https://www.fauna-flora.org/app/uploads/2017/09/rhino_shutterstock_60362779-scaled-e1655220982564.jpg",
+                age: 10,
+                eyeColor: "blue"
+            },
+            elephant: {
+                name: "Elephant",
+                picture: "https://www.wwf.org.uk/sites/default/files/styles/social_share_image/public/2018-10/Large_WW1113482.jpg",
+                age: 15,
+                eyeColor: "green"
+            }
+        }
+
+        function cargarAnimal() {
+            eleccion = document.getElementById("animal").value;
+
+            if (animals[eleccion]) {
+                document.getElementById("print").innerHTML += `
+                <div class="ficha">
+                    <h1>${animals[eleccion].name}</h1>
+                    <img src="${animals[eleccion].picture}" style="width: 50%"/>
+                    <h3>${animals[eleccion].age}</h3>
+                    <h3>${animals[eleccion].eyeColor}</h3>
+                    </div>
+                `
+            } else {
+                document.getElementById("print").innerHTML = `<h3>No se encontró el animal</h3>`
+            }
+        }
+
+        function recorrerArray() {
+            let lista = ["Lion", "Tiger", "Elephant", "Rhino"];
+            for (let i = 0; i < lista.length; i++) {
+                if (i == lista.length - 1) {
+                    document.getElementById("print").innerHTML += `<p>${lista[i]}. </p>`
+                    break;
+                } else { document.getElementById("print").innerHTML += `<p>${lista[i]}, </p>` }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
