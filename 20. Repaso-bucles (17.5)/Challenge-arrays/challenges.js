@@ -9,21 +9,17 @@ let count = 0;
 do {
   console.log(10);
   count++;
-}
-while (count <= 10);
-
+} while (count <= 10);
 
 /*------------------
 2)
 Crea un loop que compti de 0 fins a 100.
 ------------------*/
 
-
 /*------------------
 3)
 Crea un loop que compti de 100 fins a 0.
 ------------------*/
-
 
 /*------------------
 4)
@@ -37,7 +33,6 @@ per què imprimeixi els números de zero a quatre.
 // while (start > end) {
 //   end++;
 // }
-
 
 /*------------------
 5)
@@ -53,7 +48,6 @@ i el nombre de persones.
 //   console.log(`There is room for ${} more guests in the building`);
 // }
 
-
 /*------------------
 6)
 Imprimeix tots els números PARELLS entre 0 i 50.
@@ -62,8 +56,6 @@ a un console.log al final.
 
 Pista: incrementa el loop de dos en dos a cada iteració!
 ------------------*/
-
-
 
 /*------------------
 7)
@@ -74,7 +66,6 @@ Afegeix un "if/else" al cos del loop. Si el número (x)
 és parell, imprimeix `The number ${x} is even`. Si el
 número és senar, imprimeix `The number ${x} is odd`.
 ------------------*/
-
 
 /*------------------
 8)
@@ -95,22 +86,27 @@ la frase inicial però alternant majúscules i minúscules.
 
 ------------------*/
 
-// const sentence = "i am shouting";
-// const numberOfChars = 12;
-// let result = "";
-// let i = 0;
+let sentence = prompt(
+  "dame un string y te lo convierto a mayúsculas-minúsculas: super divertido"
+);
 
-// while (i <= numberOfChars) {
-//   let letter = sentence.charAt(0);
-//   if (i % 2 === 0) {
-//     letter = letter.toUpperCase();
-//   }
-//   result += letter;
-//   i++;
-// }
+const numberOfChars = sentence.length; // 12
+let result = "";
+let i = 0;
+let letter = "";
 
-// console.log(result);
+while (i <= numberOfChars) {
+  letter = sentence.charAt(i);
 
+  if (i % 2 === 0) {
+    letter = letter.toUpperCase();
+  }
+
+  result += letter;
+  i++;
+}
+
+document.getElementById("print").innerHTML = `<p class="string">${result}</p>`;
 
 /*------------------
 9)
@@ -128,9 +124,8 @@ Aquesta és una pregunta típica d'entrevista.
 Bona sort!
 ------------------*/
 
+/*
 
-
-/*------------------
 10)
 Crea el triangle de sota escrivint un bucle
 que crida cinc cops el console.log.
@@ -140,5 +135,35 @@ que crida cinc cops el console.log.
 ***
 ****
 *****
-------------------*/
+*/
 
+let asterisco = "*";
+let tronco = "--";
+let decoracion = "@";
+
+// DIBUJAMOS ÁRBOL
+for (let i = 0; i < 10; i++) {
+  if (i == 0) {
+    document.getElementById("arbol").innerHTML += `
+    <p class="estrella">☆</p>`;
+  }
+
+  if (i == 2 || i == 4) {
+    document.getElementById("arbol").innerHTML += `
+    <p class="hojas">${asterisco}<span class="decoracion">${decoracion}</span></p>`;
+    asterisco += "**";
+    continue;
+  }
+
+  if (i > 6) {
+    document.getElementById(
+      "arbol"
+    ).innerHTML += `<p class="tronco">${tronco}</p>`;
+    continue;
+  }
+
+  document.getElementById(
+    "arbol"
+  ).innerHTML += `<p class="hojas">${asterisco}</p>`;
+  asterisco += "**";
+}

@@ -133,6 +133,11 @@ const friendsAges = {
   lucy: 27,
 };
 
+for (let key in friendsAges) {
+  friendsAges[key]++;
+  // friendsAges[key] = friendsAges[key] + 1;
+}
+
 console.log(friendsAges);
 
 /*------------------
@@ -167,10 +172,30 @@ const groupOfFriends = {
     age: 27,
   },
 };
+/*
 
-for (let friend in groupOfFriends) {
-  for (let key in groupOfFriends[friend]) {
-    console.log(groupOfFriends[friend][key]);
+for (let key in groupOfFriends) {
+  if (typeof groupOfFriends[key] == Number) {
+    console.log(groupOfFriends[key].age);
+  }
+}
+
+let box = "hola";
+console.log(typeof box); */
+
+/* 
+let box = 525;
+
+if (typeof box == "string") {
+  alert("es un string");
+} else {
+  alert("no es string");
+} 
+
+for (let key in groupOfFriends) {
+  if (typeof groupOfFriends[key].age === "number") {
+    groupOfFriends[key].age++;
+    console.log(groupOfFriends[key].age);
   }
 }
 
@@ -180,8 +205,22 @@ Quines són les amistats de la feina i quines les de l'escola?
 Crea un loop que introdueixi els noms a l'string corresponent.
 ------------------*/
 
-let workFriends = "";
 let schoolFriends = "";
+let workFriends = "";
+let seleccion;
+
+let amigosCole = parseInt(prompt("cuántos amigos recuerdas de la escuela"));
+
+for (let i = 0; i < amigosCole; i++) {
+  seleccion = prompt("dime el nombre del amigo");
+  schoolFriends += `${seleccion} `;
+}
+
+let amigosTrabajo = parseInt(prompt("cuántos amigos recuerdas del trabajo"));
+for (let i = 0; i < amigosTrabajo; i++) {
+  seleccion = prompt("dime el nombre del amigo");
+  workFriends += `${seleccion} `;
+}
 
 console.log(
   `The person's work friends are ${workFriends} and school friends are ${schoolFriends}.`
