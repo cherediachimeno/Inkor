@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars y sus planetas</title>
+    <style>
+        .buscar {
+            font-size: 35px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="buscar">
+        <label for="nombrePlaneta">Elige un planeta</label>
+        <br>
+        <select name="nombrePlaneta" onchange="buscarPlaneta()" id="seleccionPlaneta">
+            <!-- option 1, option2... -->
+        </select>
+    </section>
+    <main>
+        <div id="print">
+
+        </div>
+    </main>
+    <script src="./demo.js"></script>
+</body>
+
+</html>
