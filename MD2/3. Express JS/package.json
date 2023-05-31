@@ -1,0 +1,19 @@
+{
+  "name": "3.-express-js",
+  "version": "1.0.0",
+  "description": "proyecto probando express js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "live": "nodemon server.js" 
+  },
+  "keywords": [
+    "express",
+    "servers"
+  ],
+  "author": "C.H.",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
