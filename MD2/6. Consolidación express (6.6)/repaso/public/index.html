@@ -9,11 +9,28 @@
 </head>
 
 <body>
+    <p>Ejemplo query</p>
     <form action="/query"> <!-- Aquí pondremos el destino, es decir, la ruta a la que va a ir-->
-        Nombre:<input type="text" name="nom">
+        Nombre:<input type="text" name="name">
         <br>
-        Apellido:<input type="text" name="cognom">
+        Apellido:<input type="text" name="surname">
         <br>
+        Curso:<input type="number" name="course">
+        <br>
+        Email:<input type="text" name="mail">
+        <br>
+        Dirección:<input type="text" name="address">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p>Añadir información adicional al array de videojuegos</p>
+    <form action="/sumar-juego"> <!-- Aquí pondremos el destino, es decir, la ruta a la que va a ir-->
+        Titulo:<input type="text" name="titulo">
+        <br>
+        Plataforma:<input type="text" name="plataforma">
+        <br>
+        Nota:<input type="number" name="nota">
         <button type="submit">Enviar</button>
     </form>
 </body>
