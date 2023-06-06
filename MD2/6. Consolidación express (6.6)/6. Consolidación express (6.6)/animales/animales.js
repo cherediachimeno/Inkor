@@ -1,16 +1,16 @@
 const listaAnimales = [
   {
-    nombre: "Coco",
+    nombre: "coco",
     edad: 10,
     tipo: "perro",
   },
   {
-    nombre: "Tortuga Ninja",
+    nombre: "ninja",
     edad: 60,
     tipo: "tortuga",
   },
   {
-    nombre: "Gatito",
+    nombre: "gatito",
     edad: 1,
     tipo: "gato",
   },

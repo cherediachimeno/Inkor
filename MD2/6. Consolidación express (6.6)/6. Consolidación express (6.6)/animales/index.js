@@ -42,20 +42,33 @@ app.get("/sumar-animal", (req, res) => {
 });
 
 app.get("/adoptar", (req, res) => {
+  // ME GUARDO EL ANIMAL QUE EL USUARIO QUIERE BORRAR EN LA VARIABLE ANIMAL
   let animal = req.query.animal;
   console.log(animal);
 
-  // crearemos un bucle que recorra el array y en caso de detectar coincidencia, me borrará el animal.
-  // si lo detecta, mostrar el siguiente res send:
+  // RECORRO EL ARRAY (ANIMALES) Y EN CASO DE QUE EXISTA COINCIDENCIA, MIRO DE BORRARLO
 
-  res.send(
-    `<h3>Animal borrado correctamente, ve a la ruta animales para comprobarlo<h3>
-    <form action="/animales">
-    <button type="submit">Ver ruta animales</button>
-  </form>`
-  );
+  for (let i = 0; i < animales.length; i++) {
+    if (animales[i].nombre == animal) {
+      // AL DETECTAR COINCIDENCIA EN EL NOMBRE, HAGO UN SPLICE (CORTAR Y PEGAR).
+      // SELECCIONO EL INDICE QUE QUIERO BORRAR, ES DECIR, EL DE LA VUELTA CONCRETA
+      // SI HA DETECTADO QUE EN LA VUELTA 2, EN EL INDICE 2, HAY COINCIDENCIA, PUES HAGO
+      // UN SLICE DE ESE INDICE 2, Y CORTO 1 ELEMENTO (ES DECIR, UN INDICE)
 
-  // en caso contrario, crearemos un else que nos dirá que ha habido algún tipo de error
+      animales.splice(i, 1);
+      res.send(
+        `<h3>Animal borrado correctamente, ve a la ruta animales para comprobarlo<h3>
+        <form action="/animales">
+        <button type="submit">Ver ruta animales</button>
+      </form>`
+      );
+    }
+  }
+  res.send(`<h3>Animal NO encontrado</h3>
+  <form action="/animales">
+        <button type="submit">Ver ruta animales</button>
+      </form>
+  `);
 });
 
 app.listen(3000);
