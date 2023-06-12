@@ -1,0 +1,14 @@
+.card {
+    height: 150px;
+    width: 15%;
+    background-color: wheat;
+    border: 2px black solid;
+    margin: 5px;
+    text-align: center;
+}
+
+#print {
+    display: flex;
+    flex-wrap: wrap;
+}
+
