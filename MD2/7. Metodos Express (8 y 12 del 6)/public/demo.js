@@ -93,7 +93,7 @@ function borrar() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(especie),
+    body: JSON.stringify(nuevo),
   });
   mostrar();
 }
