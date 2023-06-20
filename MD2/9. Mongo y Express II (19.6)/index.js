@@ -10,20 +10,21 @@ app.use(express.json());
 // CON MONGOOSE (MÁS ACTUALIZADA) Y MONGOCLIENT (OBSOLETA DE HACE UNOS MESES)
 
 // 1º CON MONGOOSE
-//const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 // CONEXIÓN CON MONGODB VÍA MONGOOSE
-/*
+
 mongoose
-  .connect("mongodb://0.0.0.0:27017/", {})
+  .connect("mongodb://0.0.0.0:27017/CienciaFiccion", {})
   .then(() => {
     console.log("BD is now connected");
   })
   .catch((err) => {
     console.log(err);
-  });*/
+  });
 
 // 2º CON MONGO CLIENT
+/*
 const mongodb = require("mongodb");
 let MongoClient = mongodb.MongoClient;
 
@@ -39,7 +40,7 @@ MongoClient.connect("mongodb://0.0.0.0:27017/", function (err, client) {
       "Conexión correcta a la base de datos CienciaFicción de MongoDB"
     );
   }
-});
+});*/
 
 // AQUÍ LAS RUTAS
 app.get("/planetas", function (req, res) {
@@ -67,6 +68,7 @@ app.post("/planetas", (req, res) => {
 
   // AQUÍ GUARDAREMOS ESTE ELEMENTO A LA BASE DE DATOS
   // NO NECESITAMOS HACER UN PUSH PORQUE NO ES UN ARRAY
+  //           db.planetas.insertOne({})
   app.locals.db.collection("Planetas").insertOne(nuevo, function (err, res) {
     if (err != null) {
       console.log(err);
@@ -74,6 +76,51 @@ app.post("/planetas", (req, res) => {
       console.log("Añadido correctamente a la colección Planetas");
     }
   });
+});
+
+app.put("/planetas", (req, res) => {
+  let nuevo = {
+    nombre: req.body.nombre,
+    lore: req.body.lore,
+    sistema: req.body.sistema,
+    vida: req.body.vida,
+    img: req.body.img,
+  };
+
+  // AHORA TENDRÉ QUE MIRAR EN LA BASE DE DATOS
+  // SI HAY COINCIDENCIA Y, EN CASO DE QUE
+  // LA HAYA, MODIFICAR EL RESTO DE VALORES
+
+  app.locals.db.collection("Planetas").updateOne(
+    { nombre: nuevo.nombre },
+    {
+      $set: {
+        lore: nuevo.lore,
+        sistema: nuevo.sistema,
+        vida: nuevo.vida,
+        img: nuevo.img,
+      },
+    },
+    function (err, res) {
+      if (err != null) {
+        console.log(err);
+      } else {
+        console.log("Planeta modificado correctamente");
+      }
+    }
+  );
+});
+
+app.delete("/planetas", (req, res) => {
+  app.locals.db
+    .collection("Planetas")
+    .deleteMany({ nombre: req.body.nombre }, function (err, res) {
+      if (err != null) {
+        console.log(err);
+      } else {
+        console.log("Planeta eliminado correctamente");
+      }
+    });
 });
 
 // Y EL PUERTO

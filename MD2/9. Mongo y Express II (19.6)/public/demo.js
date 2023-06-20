@@ -19,6 +19,40 @@ function insertar() {
   location.reload();
 }
 
+function editar() {
+  let nuevo = {
+    nombre: document.getElementById("nombreEditar").value,
+    lore: document.getElementById("loreEditar").value,
+    sistema: document.getElementById("sistemaEditar").value,
+    vida: document.getElementById("vidaEditar").value,
+    img: document.getElementById("imgEditar").value,
+  };
+
+  fetch("/planetas", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/JSON",
+    },
+    body: JSON.stringify(nuevo),
+  });
+  location.reload();
+}
+
+function borrar() {
+  let nuevo = {
+    nombre: document.getElementById("nombreBorrar").value,
+  };
+
+  fetch("/planetas", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/JSON",
+    },
+    body: JSON.stringify(nuevo),
+  });
+  location.reload();
+}
+
 function mostrarDatos() {
   fetch("/planetas", {
     method: "GET",
