@@ -7,24 +7,8 @@ app.use(express.json());
 
 // ELEMENTOS PARA CONECTAR CON MONGODB
 // SIEMPRE IGUALES. DOS FORMAS.
-// CON MONGOOSE (MÁS ACTUALIZADA) Y MONGOCLIENT (OBSOLETA DE HACE UNOS MESES)
+// MONGOOSE Y MONGO CLIENT. EMPEZAMOS CON MC POR ESTABILIDAD.
 
-// 1º CON MONGOOSE
-const mongoose = require("mongoose");
-
-// CONEXIÓN CON MONGODB VÍA MONGOOSE
-
-mongoose
-  .connect("mongodb://0.0.0.0:27017/CienciaFiccion", {})
-  .then(() => {
-    console.log("BD is now connected");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-// 2º CON MONGO CLIENT
-/*
 const mongodb = require("mongodb");
 let MongoClient = mongodb.MongoClient;
 
@@ -40,7 +24,7 @@ MongoClient.connect("mongodb://0.0.0.0:27017/", function (err, client) {
       "Conexión correcta a la base de datos CienciaFicción de MongoDB"
     );
   }
-});*/
+});
 
 // AQUÍ LAS RUTAS
 app.get("/planetas", function (req, res) {
@@ -125,6 +109,6 @@ app.delete("/planetas", (req, res) => {
 
 // Y EL PUERTO
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log("Servidor (Express JS) conectado correctamente al puerto 3000");
 });
